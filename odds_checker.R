@@ -1,5 +1,16 @@
+########################
+# Odds Checker Scraper #
+########################
+
 
 odds_checker <- function(url, startdate, filename="", shrink=TRUE){
+
+  # @param: str url: A URL to an oddschecker exchange
+  # @param: str startdate: The earliest date you're interested in, in the form "2016-12-01"
+  # @param: str filename: an optional filename to save the results in a CSV. If left blank, function will return a DF
+  # @param: bool shrink: If true, the odds will be scaled up (or down) so that they sum to 1
+  
+
 
   ## load required packages
   require(rvest)

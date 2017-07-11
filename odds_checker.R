@@ -26,7 +26,7 @@ odds_checker <- function(url, startdate, filename="", shrink=TRUE){
   
   # Create main DF
   maindf <- setNames(as.data.frame(matrix(nrow=length(maindates), ncol=length(scenarios)), row.names=as.character(maindates)), scenarios)
-  maindf[] <- maindf[order(rownames(maindf), decreasing=TRUE),]
+  rownames(maindf) <- rownames(maindf)[order(row.names(maindf), decreasing=TRUE)]
   
   for(scenario in scenarios){
     # Read in scenario data
